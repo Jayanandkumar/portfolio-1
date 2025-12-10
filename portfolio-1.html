@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Karri Jayanand Kumar | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:62.5%}
+body{font-family:'Poppins',sans-serif;background:#0d0d1a;color:#f0f2f5;transition:background .3s}
+h1,h2,h3,h4{font-family:'JetBrains Mono',monospace}
+a{color:inherit}
+section{padding:9.5rem 6% 4rem;position:relative}
+.heading{text-align:center;font-size:3.6rem;margin-bottom:3.6rem}
+.header{position:fixed;left:0;top:0;width:100%;padding:1.8rem 6%;display:flex;align-items:center;justify-content:space-between;z-index:999}
+.logo{font-size:2.6rem;font-family:'JetBrains Mono',monospace;font-weight:700}
+nav.navbar{display:flex;gap:2rem;align-items:center}
+nav.navbar a{font-size:1.6rem;opacity:.95}
+#theme-toggle-icon{cursor:pointer;font-size:2rem;margin-left:1rem}
+.btn{display:inline-flex;align-items:center;gap:.8rem;padding:1.1rem 2rem;border-radius:50px;background:linear-gradient(135deg,#00f5c3,#ff2e88);color:#081018;font-weight:700;border:none;cursor:pointer}
+.btn-outline{background:transparent;color:#00f5c3;border:2px solid rgba(0,245,195,.12);padding:1rem 1.8rem;border-radius:50px}
+.glass-card{background:#11111d;border:1px solid rgba(255,255,255,.04);border-radius:1.2rem;padding:1.6rem;overflow:hidden;display:flex;flex-direction:column;gap:1rem}
+.home{display:flex;gap:3.6rem;align-items:center;justify-content:center;flex-wrap:wrap}
+.home-content{max-width:60rem}
+.home-content h3{color:#a9a9d4;font-size:2.4rem}
+.home-content h1{font-size:4.6rem;line-height:1}
+.typing-container{font-weight:700;color:#00f5c3;margin:1rem 0}
+.home-img img{width:320px;height:320px;object-fit:cover;border-radius:50%;border:6px solid #00f5c3;display:block}
+.profiles-container{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem;max-width:1200px;margin:0 auto}
+.profile-card{display:flex;align-items:center;gap:1.4rem;padding:1.6rem;border-radius:1rem}
+.profile-logo{width:7.6rem;height:7.6rem;display:flex;align-items:center;justify-content:center;border-radius:.8rem;background:#0b0b10;flex-shrink:0}
+.profile-logo img{max-width:100%;max-height:100%}
+.profile-body h4{font-size:1.8rem;color:#00f5c3;margin-bottom:.2rem}
+.profile-body p{color:#a9a9ad;font-size:1.3rem;margin-bottom:.4rem}
+.skills-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.skill-card{background:#0f1116;border-radius:1rem;padding:1.4rem;display:flex;flex-direction:column;align-items:center;gap:.8rem;text-align:center;border:1px solid rgba(255,255,255,0.03)}
+.skill-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:.6rem}
+.skill-title{font-size:1.6rem;color:#f0f2f5;font-weight:700}
+.skill-sub{font-size:1.3rem;color:#a9a9ad}
+.certificates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem;max-width:1200px;margin:0 auto}
+.certificate-block{display:flex;flex-direction:column;border-radius:1rem;overflow:hidden}
+.certificate-thumb{width:100%;height:16rem;object-fit:cover;background:#0b0b10}
+.certificate-body{padding:1.4rem;background:#0d0d14;display:flex;flex-direction:column;gap:.6rem}
+.certificate-body h3{font-size:1.6rem;color:#00f5c3}
+.projects-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
+.project-card{display:flex;flex-direction:column;border-radius:.9rem;overflow:hidden;background:#0f1116;border:1px solid rgba(255,255,255,0.04)}
+.project-thumb{width:100%;height:18rem;object-fit:cover;background:#0b0b10}
+.project-body{padding:1.2rem;display:flex;flex-direction:column;gap:.6rem}
+.project-body h4{color:#00f5c3;font-size:1.6rem}
+.project-body p{color:#a9a9ad;font-size:1.3rem}
+.project-actions{display:flex;gap:.8rem;margin-top:auto;flex-wrap:wrap}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1200px;margin:1.6rem auto}
+.gallery-item img{width:100%;height:12rem;object-fit:cover;border-radius:.6rem;border:1px solid rgba(255,255,255,0.03)}
+.footer{padding:1.8rem 6%;display:flex;justify-content:space-between;align-items:center;background:transparent}
+@media (max-width:1000px){.profiles-container,.certificates-grid,.projects-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:repeat(2,1fr)}.home{flex-direction:column;text-align:center}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.skills-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header" style="z-index:999">
+<div class="logo">Jayanand<span style="color:#00f5c3">.</span></div>
+<nav class="navbar">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#coding-profiles">Profiles</a>
+<a href="#skills">Skills</a>
+<a href="#certifications">Certs</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<i id="theme-toggle-icon" class="fas fa-moon" title="Toggle theme"></i>
+</nav>
+</header>
+<main style="position:relative;z-index:2">
+<section id="home" class="home" style="padding-top:9.5rem">
+<div class="home-content">
+<h3>Data Analyst</h3>
+<h1>Karri Jayanand Kumar</h1>
+<div class="typing-container"><span class="typing-text"></span></div>
+<p style="color:#a9a9ad;max-width:60rem;line-height:1.7">
+I turn raw data into actionable insights by combining SQL, Python, and Power BI to generate clear visualizations and business-focused recommendations. I build reproducible analysis pipelines, craft meaningful metrics, and present findings that drive decisions.
+</p>
+<div style="margin-top:1.6rem;display:flex;gap:1rem;flex-wrap:wrap">
+<a class="btn" href="C:/Users/kumar/Desktop/Resume/Anandh_resume.pdf" target="_blank" rel="noreferrer"><i class="fas fa-download"></i> Resume</a>
+<a class="btn-outline" href="#contact" role="button">Let's Talk</a>
+</div>
+</div>
+<div class="home-img">
+<img src="C:/Users/kumar/Desktop/Jayanand/my photos/NP1.jpg" alt="Karri Jayanand Kumar">
+</div>
+</section>
+<section id="about" style="background:transparent;padding-top:6rem;padding-bottom:4rem">
+<div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:center">
+<div><img src="C:/Users/kumar/Desktop/Jayanand/my photos/NP1.jpg" style="width:100%;border-radius:1rem;transform:scaleX(-1);max-width:520px" alt="Jayanand"></div>
+<div>
+<h2 class="heading">About <span style="background:linear-gradient(135deg,#00f5c3,#ff2e88);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Me</span></h2>
+<h3 style="font-size:2rem;margin-bottom:1rem">Data Analyst — Insight through Data</h3>
+<p style="color:#a9a9ad;line-height:1.7">
+I specialize in extracting, cleaning and modeling data to produce dashboards and analytical reports. My strengths are SQL-based ETL, Python (pandas) for analysis, Power BI for storytelling, Excel for ad-hoc analysis, and Snowflake for cloud data warehousing.
+</p>
+</div>
+</div>
+</section>
+<section id="coding-profiles" style="padding-top:3rem;padding-bottom:3rem">
+<h2 class="heading">Coding Profiles</h2>
+<div class="profiles-container">
+<div class="profile-card glass-card">
+<div class="profile-logo"><img src="https://uploads.onecompiler.io/42b5cwusm/43wmyckzh/l.png" alt="LeetCode"></div>
+<div class="profile-body">
+<h4>LeetCode</h4>
+<p>Practice & algorithms</p>
+<div style="font-size:1.2rem;color:#9aa0a6">https://leetcode.com/u/Jayanandkumar/</div>
+</div>
+<div style="margin-left:auto"><a class="btn" href="https://leetcode.com/u/Jayanandkumar/" target="_blank" rel="noreferrer">Open</a></div>
+</div>
+<div class="profile-card glass-card">
+<div class="profile-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg" alt="GitHub"></div>
+<div class="profile-body">
+<h4>GitHub</h4>
+<p>Projects & repos</p>
+<div style="font-size:1.2rem;color:#9aa0a6">https://github.com/Jayanandkumar</div>
+</div>
+<div style="margin-left:auto"><a class="btn" href="https://github.com/Jayanandkumar" target="_blank" rel="noreferrer">Open</a></div>
+</div>
+<div class="profile-card glass-card">
+<div class="profile-logo"><img src="https://uploads.onecompiler.io/42b5cwusm/43wmyckzh/hc.png" alt="HackerRank"></div>
+<div class="profile-body">
+<h4>HackerRank</h4>
+<p>Practice & certification</p>
+<div style="font-size:1.2rem;color:#9aa0a6">https://www.hackerrank.com/profile/jayanand298</div>
+</div>
+<div style="margin-left:auto"><a class="btn" href="https://www.hackerrank.com/profile/jayanand298" target="_blank" rel="noreferrer">Open</a></div>
+</div>
+<div class="profile-card glass-card">
+<div class="profile-logo"><img src="https://uploads.onecompiler.io/42b5cwusm/43wmyckzh/c.png" alt="CodeChef"></div>
+<div class="profile-body">
+<h4>CodeChef</h4>
+<p>Competitive programming</p>
+<div style="font-size:1.2rem;color:#9aa0a6">https://www.codechef.com/users/jayanandkumar</div>
+</div>
+<div style="margin-left:auto"><a class="btn" href="https://www.codechef.com/users/jayanandkumar" target="_blank" rel="noreferrer">Open</a></div>
+</div>
+<div class="profile-card glass-card">
+<div class="profile-logo"><img src="https://uploads.onecompiler.io/42b5cwusm/43wmyckzh/cf.png" alt="Codeforces"></div>
+<div class="profile-body">
+<h4>Codeforces</h4>
+<p>Contests & rating</p>
+<div style="font-size:1.2rem;color:#9aa0a6">https://codeforces.com/profile/Jayanand</div>
+</div>
+<div style="margin-left:auto"><a class="btn" href="https://codeforces.com/profile/Jayanand" target="_blank" rel="noreferrer">Open</a></div>
+</div>
+<div class="profile-card glass-card">
+<div class="profile-logo"><img src="https://uploads.onecompiler.io/42b5cwusm/43wmyckzh/gfg.png" alt="GfG"></div>
+<div class="profile-body">
+<h4>GeeksforGeeks</h4>
+<p>Articles & practice</p>
+<div style="font-size:1.2rem;color:#9aa0a6">https://www.geeksforgeeks.org/profile/jayanand298</div>
+</div>
+<div style="margin-left:auto"><a class="btn" href="https://www.geeksforgeeks.org/profile/jayanand298" target="_blank" rel="noreferrer">Open</a></div>
+</div>
+</div>
+</section>
+<section id="skills" style="padding-top:3rem;padding-bottom:3rem">
+<h2 class="heading">My Skills</h2>
+<div class="skills-grid">
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#00f5c3">C</div></div>
+<div class="skill-title">C</div>
+<div class="skill-sub">Systems & algorithms</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#ff8fb3">C++</div></div>
+<div class="skill-title">C++</div>
+<div class="skill-sub">Performance & STL</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#ffd43b">Java</div></div>
+<div class="skill-title">Java</div>
+<div class="skill-sub">OOP & backend</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#61dafb">Py</div></div>
+<div class="skill-title">Python</div>
+<div class="skill-sub">pandas, numpy</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#bfeee6">SQL</div></div>
+<div class="skill-title">SQL</div>
+<div class="skill-sub">Queries & modelling</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#bfeee6">Power Pages</div></div>
+<div class="skill-title">Power Pages</div>
+<div class="skill-sub">Low-code pages</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#e34f26">HTML</div></div>
+<div class="skill-title">HTML</div>
+<div class="skill-sub">Markup & semantics</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#1572b6">CSS</div></div>
+<div class="skill-title">CSS</div>
+<div class="skill-sub">Styling & layouts</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#217346">Excel</div></div>
+<div class="skill-title">Excel</div>
+<div class="skill-sub">Pivot tables & formulas</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#f2c200">Power BI</div></div>
+<div class="skill-title">Power BI</div>
+<div class="skill-sub">Dashboards & reporting</div>
+</div>
+<div class="skill-card">
+<div class="skill-icon"><div style="font-weight:700;color:#9ad7d3">Snowflake</div></div>
+<div class="skill-title">Snowflake</div>
+<div class="skill-sub">Cloud data warehouse</div>
+</div>
+</div>
+</section>
+<section id="certifications" style="padding-top:3rem;padding-bottom:3rem">
+<h2 class="heading">My Certifications</h2>
+<div class="certificates-grid">
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="python">
+<div class="certificate-body">
+<h3>Python Certificate</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\python.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/python.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="redhat">
+<div class="certificate-body">
+<h3>Red Hat Certificate</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\23mh1a4225redhat.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/23mh1a4225redhat.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="adobe">
+<div class="certificate-body">
+<h3>Adobe Certificate</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\Adobe.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/Adobe.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="c">
+<div class="certificate-body">
+<h3>C Programming</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\C.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/C.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="dbms">
+<div class="certificate-body">
+<h3>DBMS</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\dbms.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/dbms.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="ecert1">
+<div class="certificate-body">
+<h3>eCertificate 1</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\eCertificate.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/eCertificate.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="ecert2">
+<div class="certificate-body">
+<h3>eCertificate 2</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\eCertificate2.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/eCertificate2.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="htmlcss">
+<div class="certificate-body">
+<h3>HTML &amp; CSS</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\HTML and CSS.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/HTML and CSS.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="javascript">
+<div class="certificate-body">
+<h3>JavaScript</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\Javascript.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/Javascript.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="resume">
+<div class="certificate-body">
+<h3>Resume</h3>
+<p class="meta">C:\Users\kumar\Desktop\Resume\Anandh_resume.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Resume/Anandh_resume.pdf" target="_blank" rel="noreferrer">View</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="oracle">
+<div class="certificate-body">
+<h3>Oracle Java</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\oracle course 3 java certificate.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/oracle course 3 java certificate.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+<div class="certificate-block glass-card">
+<img class="certificate-thumb" src="C:/Users/kumar/Desktop/Jayanand/certificates/prompt.png" alt="pp">
+<div class="certificate-body">
+<h3>Presentation</h3>
+<p class="meta">C:\Users\kumar\Desktop\Jayanand\certificates\pp.pdf</p>
+<a class="btn" href="C:/Users/kumar/Desktop/Jayanand/certificates/pp.pdf" target="_blank" rel="noreferrer">View Credential</a>
+</div>
+</div>
+</div>
+</section>
+<section id="projects" style="padding-top:3rem;padding-bottom:3rem">
+<h2 class="heading">My Projects</h2>
+<div class="projects-grid">
+<div class="project-card">
+<img class="project-thumb" src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.09_2cf035f5.jpg" alt="11TASK Screenshot">
+<div class="project-body">
+<h4>11TASK Report</h4>
+<p>A Power BI report covering task-level KPIs and visual breakdowns.</p>
+<div class="project-actions">
+<a class="btn" href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.09_2cf035f5.jpg" target="_blank" rel="noreferrer">View Screenshot</a>
+<a class="btn-outline" href="C:/Users/kumar/Desktop/Dashboards/11TASK[1].pbix" target="_blank" rel="noreferrer">Open PBIX</a>
+</div>
+</div>
+</div>
+<div class="project-card">
+<img class="project-thumb" src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.09_9ba8bb03.jpg" alt="dash Screenshot">
+<div class="project-body">
+<h4>Dash Report</h4>
+<p>Interactive dashboard with regional and product-level metrics.</p>
+<div class="project-actions">
+<a class="btn" href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.09_9ba8bb03.jpg" target="_blank" rel="noreferrer">View Screenshot</a>
+<a class="btn-outline" href="C:/Users/kumar/Desktop/Dashboards/dash.pbix" target="_blank" rel="noreferrer">Open PBIX</a>
+</div>
+</div>
+</div>
+<div class="project-card">
+<img class="project-thumb" src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.09_c39f5831.jpg" alt="panda Screenshot">
+<div class="project-body">
+<h4>Panda Dashboard</h4>
+<p>Customer and sales analysis with colorful visuals and KPIs.</p>
+<div class="project-actions">
+<a class="btn" href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.09_c39f5831.jpg" target="_blank" rel="noreferrer">View Screenshot</a>
+<a class="btn-outline" href="C:/Users/kumar/Desktop/Dashboards/panda_dashboard[1].pbix" target="_blank" rel="noreferrer">Open PBIX</a>
+</div>
+</div>
+</div>
+<div class="project-card">
+<img class="project-thumb" src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.10_3fa022d2.jpg" alt="taskdash Screenshot">
+<div class="project-body">
+<h4>TaskDash</h4>
+<p>Task monitoring dashboard with timeline and distribution charts.</p>
+<div class="project-actions">
+<a class="btn" href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.10_3fa022d2.jpg" target="_blank" rel="noreferrer">View Screenshot</a>
+<a class="btn-outline" href="C:/Users/kumar/Desktop/Dashboards/taskdash.pbix" target="_blank" rel="noreferrer">Open PBIX</a>
+</div>
+</div>
+</div>
+<div class="project-card">
+<img class="project-thumb" src="C:/Users/kumar/Desktop/power bi/WhatsApp Image 2025-12-10 at 10.15.10_a1938f48.jpg" alt="Advance1 Screenshot">
+<div class="project-body">
+<h4>Advance1</h4>
+<p>Advanced analytics dashboard with slicers and KPI selectors.</p>
+<div class="project-actions">
+<a class="btn" href="C:/Users/kumar/Desktop/power bi/WhatsApp Image 2025-12-10 at 10.15.10_a1938f48.jpg" target="_blank" rel="noreferrer">View Screenshot</a>
+<a class="btn-outline" href="C:/Users/kumar/Desktop/power bi/Advance1.pbix" target="_blank" rel="noreferrer">Open PBIX</a>
+</div>
+</div>
+</div>
+</div>
+<h3 style="text-align:center;margin-top:2rem;margin-bottom:1rem;color:#a9a9ad">Additional Screenshots</h3>
+<div class="gallery-grid">
+<div class="gallery-item"><a href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.21_9a8ed064.jpg" target="_blank"><img src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.21_9a8ed064.jpg" alt="img"></a></div>
+<div class="gallery-item"><a href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.34_f0ba6535.jpg" target="_blank"><img src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.34_f0ba6535.jpg" alt="img"></a></div>
+<div class="gallery-item"><a href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.35_52d51925.jpg" target="_blank"><img src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.35_52d51925.jpg" alt="img"></a></div>
+<div class="gallery-item"><a href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.38_ac9635f8.jpg" target="_blank"><img src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.38_ac9635f8.jpg" alt="img"></a></div>
+<div class="gallery-item"><a href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.39_29179112.jpg" target="_blank"><img src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.39_29179112.jpg" alt="img"></a></div>
+<div class="gallery-item"><a href="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.40_62efadb5.jpg" target="_blank"><img src="C:/Users/kumar/Desktop/Dashboards/WhatsApp Image 2025-12-10 at 10.15.40_62efadb5.jpg" alt="img"></a></div>
+</div>
+</section>
+<section id="contact" style="padding-top:3rem;padding-bottom:6rem">
+<h2 class="heading">Let's Build Something Together</h2>
+<form style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:1rem">
+<input type="text" placeholder="Your Name" style="padding:1rem;border-radius:.8rem;border:1px solid rgba(255,255,255,.06);background:transparent;color:#f0f2f5">
+<input type="email" placeholder="Your Email" style="padding:1rem;border-radius:.8rem;border:1px solid rgba(255,255,255,.06);background:transparent;color:#f0f2f5">
+<textarea rows="6" placeholder="Message..." style="padding:1rem;border-radius:.8rem;border:1px solid rgba(255,255,255,.06);background:transparent;color:#f0f2f5"></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-text">© 2025 Karri Jayanand Kumar | All Rights Reserved.</div>
+</footer>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+new Typed('.typing-text',{strings:["Turning Data into Insights","Visualizing for Impact","SQL • Python • Power BI"],typeSpeed:60,backSpeed:30,loop:true});
+const themeToggle=document.getElementById('theme-toggle-icon');themeToggle.addEventListener('click',()=>{document.body.classList.toggle('light');themeToggle.classList.toggle('fa-sun');themeToggle.classList.toggle('fa-moon');});
+</script>
+</body>
+</html>
